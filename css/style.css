@@ -1,0 +1,774 @@
+/* OVERALL STYLE */
+html, body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #081c15;
+    width: 100%;
+    height: 100%;
+    background-color: #dae9eb;
+    overflow-x: hidden;
+}
+
+p{
+    text-align:center;
+    margin: 20px;
+}
+
+nav {
+    width: 100vw;
+    background-color: #a4ccdd;
+}
+
+a{
+    color: #0b3d91;;
+    text-transform: uppercase;
+    font-weight:bold;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+}
+
+.button {
+    padding: 12px 16px; /* Comfortable padding for touch devices */
+    font-size: 18px; /* Larger font size for readability on small screens */
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    width: 90%; /* Full-width button on mobile */
+    max-width: 300px; /* Limit the max width */
+    margin: 10px auto; /* Center the button and add vertical spacing */
+}
+
+.button:hover {
+    background-color: #003a80;
+}
+
+/* unvisited */
+a:link{
+    color: #0b3d91
+}
+/* hover */
+a:hover{
+    font-size: 110%;
+    color: #0961b8;
+    text-decoration: underline;
+}
+/* active */
+a:active{
+    font-size: 110%;
+    color: #003a80;
+    text-decoration: underline;
+}
+
+/* Mobile-First Navigation */
+nav ul {
+    display: flex;
+    flex-direction: column; /* Stack vertically on mobile */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+nav li {
+    padding: 1em;
+    text-align: center; /* Center text on mobile */
+    margin: auto;
+}
+
+a.skip {
+    position: absolute;
+    top: -100px;
+    background-color:#0b3d91;
+    color: #ffffff;
+    transition: top .5s;
+}
+
+.skip:focus{
+    top:0px;
+}
+
+nav{
+    background-color: #93c8eb;
+}
+
+header{
+    background-color: #9bbfd7;
+    padding: 20px;
+}
+
+.top-bar{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    color: #003a80;
+    font-size: 1.8rem;
+}
+
+
+h2{
+    text-align: center;
+    margin: 20px;
+    color:#003a80;
+}
+
+
+table{
+    width: 90%;
+    margin: auto;
+}
+
+
+th{
+    background-color: #0056b3;
+    color: #ffffff;
+    position:sticky;
+    top:0;
+    z-index: 10;
+}
+
+
+tr:nth-child(even){
+    background-color: #b0cde0;
+}
+
+
+tr:hover{
+    background-color: #81b4d6;
+}
+
+td{
+    text-align: center;
+}
+
+
+tbody a { 
+    display: block; 
+}
+
+
+footer{
+    background-color: #003a80;
+    color: rgb(228, 236, 239);
+    padding: 20px;
+    text-align: center;
+}
+
+footer a{
+    font-size: large;
+    font-weight: bold;
+    color: rgb(228, 236, 239);
+    transition: all 0.5s ease-out;
+    text-decoration: underline;
+}
+
+    
+footer a:link{
+    color: rgb(228, 236, 239)
+}
+
+footer a:visited{
+    color: #7aa0c2
+}
+
+/* hover */
+footer a:hover{
+    font-size: 110%;
+    color: #99c4e3;
+    text-decoration: underline;
+}
+/* active */
+footer a:active{
+    font-size: 110%;
+    color: #00457c;
+    text-decoration: underline;
+}
+
+/* Card Style */
+.card {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on mobile */
+    align-items: center;
+    padding: 15px;
+    width: 60%; /* Full width on mobile */
+    margin: 15px auto;
+    background-color: #77bbe3;
+    transition: transform .2s;
+    box-shadow: 4px 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: scale(0.9);
+    background-color: #0056b3;
+}
+
+
+a.card-text {
+    color: #0b3d91;
+    font-weight: bold;
+    font-size: medium;
+    text-decoration: none;
+}
+
+.card img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    margin: auto;
+    border-radius: 20px;
+}
+
+
+#show-more {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0056b3;
+    color: #fff;
+    border: #333;
+    border-width: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+
+}
+
+#show-more:hover {
+    background-color: #003a80;
+}
+
+
+/* Gallery Section Styling */
+#gallery {
+    text-align: center;
+    padding: 20px;
+    background-color: #e0e0e0; /* Optional: Add background color */
+}
+
+/* Gallery Title */
+#gallery h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #003a80;
+}
+
+/* Container for Gallery Figures */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
+
+/* Figure Styling */
+.gallery-container figure {
+    margin: auto;
+    background-color: #b0cde0;
+    padding: 1rem 1rem 4rem 1rem;
+    box-shadow: 5px 7px 4px #888888;
+    width: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    transition: transform .2s;
+}
+
+/* Hover Effect: Expand Figure */
+.gallery-container figure:hover {
+    transform: scale(1.5);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Image Styling */
+.gallery-container img {
+    width: 20%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform .2s;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows the images to wrap to the next line */
+    justify-content: center; /* Center the images horizontally */
+    gap: 15px; /* Space between images */
+    padding: 20px;
+}
+
+.gallery-container img {
+    width: 20%; /* Set a fixed width for each image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    object-fit: cover;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.6); /* Slightly enlarge the image on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .gallery-container {
+        gap: 10px; /* Reduce spacing on smaller screens */
+    }
+    .gallery-container figure {
+        width: 40px; /* Smaller figures on smaller screens */
+    }
+}
+
+/* individual results section */
+
+individual-results .athlete {
+    width: 95%;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10%;
+}
+
+.athlete-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    width: 85%;
+    margin: 0 auto;
+    background-color: rgb(210, 203, 203);
+    padding: 4%;
+}
+
+.athlete-name {
+    text-align: left;
+}
+
+.athlete-grade {
+    text-align: right;
+}
+
+figure {
+    margin: auto;
+    background-color: rgb(216, 233, 238);
+    padding: 1rem 1rem 2rem 1rem;
+    box-shadow: 5px 7px 4px #888888;
+    width:80%;
+    align-items: center;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on mobile */
+    align-items: center;
+}
+
+figcaption{
+    color: #000;
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+img {
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
+    align-items: center;
+    margin: auto;
+}
+
+
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    padding: 4%;
+    margin-top:15px;
+    border:#000;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    width: 50%; 
+    margin: 0 auto;
+}
+
+dt {
+    font-weight: bold;
+    color: #333;
+    flex-basis: 33%;
+}
+
+dd {
+    color: #666;
+    margin-left: auto;
+    flex-basis: 66%;
+}
+
+img.logo{
+    display: block;
+    margin: auto;
+    padding:10px;
+    border-radius: 20%; 
+    width:20%;
+
+    /* animation zoom in on hover image */
+    transition: transform .2s;
+}
+
+
+.logo:hover{
+    transform: scale(1.5);
+}
+
+a.skip {
+    background-color: rgb(228, 236, 239);
+    color:#081c15;
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1b1b1b; /* Darker background */
+    color: #e0e0e0; /* Light text for readability */
+}
+
+body.dark-mode nav {
+    background-color: #1f5d7a; /* Darker for contrast */
+}
+
+body.dark-mode a, 
+body.dark-mode footer a {
+    color: #ccd9e4; /* Lightened for readability */
+}
+
+/* Typography and Text Elements - Dark Mode */
+body.dark-mode h2 {
+    background-color: rgb(53, 120, 145); /* Darker shade */
+    color: white;
+}
+
+body.dark-mode header h1,
+body.dark-mode header h2 {
+    color: white;
+}
+
+body.dark-mode p, 
+body.dark-mode main p {
+    color: #e0e0e0;
+}
+
+/* Navigation Styling - Dark Mode */
+body.dark-mode nav a {
+    border-color: #297a9c;
+    background-color: #297a9c;
+    color: white;
+}
+
+body.dark-mode nav a:hover {
+    background-color: #1f5d7a;
+}
+
+/* Athlete Card Container Styling - Dark Mode */
+body.dark-mode #individual-results .athlete {
+    background-color: #3b3b3b;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .athlete-header {
+    background-color: #444;
+}
+
+/* Darker background for figures */
+body.dark-mode figure {
+    background-color: #333;
+}
+
+/* Data List Styling - Dark Mode */
+body.dark-mode dl {
+    background-color: #444;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode dt {
+    color: #c0c0c0;
+}
+
+body.dark-mode dd {
+    color: #a0a0a0;
+}
+
+/* Dark Mode Footer */
+body.dark-mode footer {
+    background-color: #222;
+    color: #d3a3e0;
+}
+
+body.dark-mode footer a {
+    color: #b891d3;
+}
+
+/* Back to Top Button - Dark Mode */
+body.dark-mode #backToTopBtn {
+    background-color: #444;
+    color: white;
+}
+
+body.dark-mode #backToTopBtn:hover {
+    background-color: #222;
+}
+
+/* Table Styling - Dark Mode */
+body.dark-mode th, 
+body.dark-mode td {
+    border-color: #444;
+}
+
+body.dark-mode tr:nth-child(even) {
+    background-color: #555;
+}
+
+body.dark-mode tr:nth-child(odd) {
+    background-color: #444;
+}
+
+h1{
+    animation-duration: 2s;
+    animation-name: slide-in;
+}
+
+@keyframes slide-in {
+    from {
+      translate: 150vw 0;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+
+
+@media(prefers-reduced-motion: reduce) {
+    h1{
+        animation: none;
+}
+
+
+a{
+    transition:none;
+}
+
+/* hover */
+a:hover{
+    font-size: 100%;
+}
+/* active */
+a:active{
+    font-size: 100%;
+}
+
+
+a.skip {
+    
+    transition: none;
+}
+
+.top-image{
+    transition: none;
+}
+
+/* zoom in on image when hover */
+.top-image:hover{
+    transform: none;
+}
+
+footer a{
+    transition: none;
+    font-size: 100%;
+}
+
+footer a:hover{
+    font-size: 100%;
+
+}
+
+footer a:active{
+    font-size: 100%;
+}
+
+/* Back to Top Button - Dark Mode */
+body.dark-mode #backToTopBtn {
+    background-color: #444;
+    color: white;
+}
+
+body.dark-mode #backToTopBtn:hover {
+    background-color: #222;
+}
+
+/* Table Styling - Dark Mode */
+body.dark-mode th, 
+body.dark-mode td {
+    border-color: #444;
+}
+
+body.dark-mode tr:nth-child(even) {
+    background-color: #555;
+}
+
+body.dark-mode tr:nth-child(odd) {
+    background-color: #444;
+}
+
+.card {
+    transition: none;
+    display: flex;
+    flex-direction: column; /* Stacked vertically on mobile */
+    align-items: center;
+    padding: 15px;
+    width: 80%; /* Adjusted width for mobile */
+    margin: 15px auto;
+    background-color: #b9d4e1;
+    transition: transform .2s;
+    box-shadow: 4px 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover{
+    background-color: #2d4f6a;
+    color: rgb(228, 236, 239);
+    text-decoration: underline;
+    transform: scale(0.9);
+}
+
+a.card-text {
+    color: #081C15;
+    font-weight: bold;
+    font-size: medium;
+    text-decoration: none;
+}
+
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    nav ul li a {
+      padding: 10px 0;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    main {
+      padding: 40px;
+    }
+    .athlete {
+      justify-content: space-between;
+    }
+  }
+
+  /* Responsive Adjustments */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row; /* Switch to horizontal for tablets and above */
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 40%; /* Wider for tablets */
+    }
+
+    .gallery-container figure {
+        width: 200px; /* Reset for tablets */
+    }
+}
+
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .card:hover,
+    a:hover {
+        transform: none;
+    }
+}
+
+/* Container Styling for the Section */
+.homelist {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    color: #003a80;
+    background-color: #335d80; /* Darker background for better contrast */
+    border-radius: 8px;
+    padding: 20px; /* Add some padding to the container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add depth */
+}
+  
+
+/* Styling for the Links */
+.homelist a {
+    display: block;
+    padding: 12px 15px; /* Maintain padding for comfort */
+    color: #ffffff; /* White text for better contrast */
+    text-decoration: none;
+    font-weight: 600;
+    background-color: #6298ce; /* Darker background for links */
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+    width: 90%; /* Make the width responsive */
+    max-width: 400px; /* Limit maximum width */
+    margin: 10px auto; /* Center the block */
+}
+
+/* Hover Effect */
+.homelist a:hover {
+    background-color: #2d63a2; /* Darker blue for hover */
+    color: #e0e0e0; /* Lighten the text color for better contrast on hover */
+    transform: scale(1.05); /* Slight scale for a cleaner hover effect */
+}
+
+/* Active State */
+.homelist a:active {
+    background-color: #d0dded; /* Even darker for active state */
+    color: #ffffff; /* White text to maintain contrast */
+    transform: scale(1.02); /* Slightly less scale on active click */
+}
+
+
+  /* Keyframe Animation */
+@keyframes slide-in {
+    from {
+        translate: 150vw 0;
+        scale: 200% 1;
+    }
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    }
+}
